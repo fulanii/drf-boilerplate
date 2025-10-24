@@ -118,6 +118,9 @@ source venv/bin/activate
 git clone https://github.com/fulanii/drf-boilerplate/
 cd drf-boilerplate
 pip install -r requirements.txt
+python manage.py run makemigrations 
+python manage.py run migrate
+git remote set-url github.com/you-username/your-repo 
 ```
 
 ### Contribute and Support 
