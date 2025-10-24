@@ -16,7 +16,7 @@ venv/
 ENV/
 .venv/
 .env
-.env.*
+# .env.*
 .python-version
 
 # Django
