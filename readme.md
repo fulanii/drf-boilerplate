@@ -63,7 +63,7 @@ The internal configuration package is likely named config. To personalize your p
    >>> print(get_random_secret_key()) # (Copy this output into your .env SECRET_KEY)
 ```
 
-1. Adjust Settings Modules
+4. Adjust Settings Modules
     - Your settings are split across modules. You primarily interact with environment variables, but can adjust framework settings here:
 
    | File |Customization Focus |
@@ -72,7 +72,7 @@ The internal configuration package is likely named config. To personalize your p
    | `config/settings/development.py` | Use this for local-only tools. | 
    | `config/settings/production.py` | Review security settings (SECURE_SSL_REDIRECT, CORS etc.) before deployment.. | 
 
-2. Running the Application
+5. Running the Application
     - To ensure you use the correct configuration:
 
    | Environment | `.env` |
@@ -80,6 +80,11 @@ The internal configuration package is likely named config. To personalize your p
    | development | `DJANGO_SETTINGS_MODULE=config.settings.development` |
    | production | `DJANGO_SETTINGS_MODULE=config.settings.production` |
 
+6. Remove the lines bellow from [.gitignore](/.gitignore) if you want to keep tract of migrations
+    ```
+   */migrations/*.py
+   !*/migrations/__init__.py
+    ```
 
 ### Project Structure
 ```
