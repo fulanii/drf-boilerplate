@@ -88,15 +88,25 @@ The internal configuration package is likely named config. To personalize your p
 
 ### Project Structure
 ```
+.
 ├── authentication
 │   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
 │   ├── migrations
 │   │   ├── __init__.py
+│   │   ├── 0001_initial.py
+│   │   ├── 0002_emailverification_passwordresetcode.py
+│   │   ├── 0003_rename_passwordresetcode_emailverificationmodel_and_more.py
+│   │   └── 0004_alter_customuser_first_name_and_more.py
 │   ├── models.py
 │   ├── serializer.py
-│   ├── tests.py
+│   ├── tests
+│   │   ├── __init__.py
+│   │   ├── test_models.py
+│   │   ├── test_serializer.py
+│   │   └── test_views.py
+│   ├── uitls.py
 │   ├── urls.py
 │   └── views.py
 ├── config
@@ -109,8 +119,9 @@ The internal configuration package is likely named config. To personalize your p
 │   ├── urls.py
 │   └── wsgi.py
 ├── db.sqlite3
-├── .env.example
+├── LICENSE
 ├── manage.py
+├── pytest.ini
 ├── readme.md
 └── requirements.txt
 ```
@@ -136,3 +147,6 @@ We welcome contributions and feedback! If you find a bug, have a suggestion for 
 2.  **Fork the repository** and submit a **Pull Request** (PR) with your changes.
 
 If this boilerplate saved you time, consider giving the repository a star ⭐!
+
+![docs](/assets/docs.png)
+![docs](/assets/admin.png)
